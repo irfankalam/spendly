@@ -207,3 +207,63 @@
     .hero-actions { flex-direction: column; width: 100%; }
     .hero-actions .btn-primary { text-align: center; }
 }
+
+/* ------------------------------------------------------------------ */
+/* "See how it works" modal                                            */
+/* ------------------------------------------------------------------ */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 15, 15, 0.75);
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-box {
+    position: relative;
+    width: 100%;
+    max-width: 840px;
+    background: var(--paper-card);
+    border-radius: var(--radius-lg);
+    padding: 0.75rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: -2.5rem;
+    right: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: none;
+    border-radius: 50%;
+    background: var(--paper-card);
+    color: var(--ink);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.modal-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
